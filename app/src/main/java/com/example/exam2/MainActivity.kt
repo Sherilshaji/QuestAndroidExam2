@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
 
         val btn=findViewById<Button>(R.id.btn_show_news)
 
-        val intent= Intent(this,RecyclerViewMain::class.java)
+        val intent= Intent(this,Activity2ViewMain::class.java)
         btn.setOnClickListener(){
             val source=edtTxtSource.text.toString()
             val country=edtTxtCountry.text.toString()

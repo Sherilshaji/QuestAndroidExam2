@@ -6,12 +6,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.room.Room
 
-class RecyclerViewMain:ComponentActivity(),RecyclerViewAdapter.ItemClickListener {
+class Activity2ViewMain:ComponentActivity(),RecyclerViewAdapter.ItemClickListener {
     private lateinit var source: String
     private lateinit var country: String
-    private val viewModel by viewModels<RecyclerActivityViewModel>()
+    private val viewModel by viewModels<Activity2ViewModel>()
     private lateinit var mRecyclerView: RecyclerView
     private var mAdapter: RecyclerViewAdapter = RecyclerViewAdapter(this)
     private lateinit var newsDB:NewsDB
@@ -22,7 +21,7 @@ class RecyclerViewMain:ComponentActivity(),RecyclerViewAdapter.ItemClickListener
         setContentView(R.layout.recycler_view_main)
         mRecyclerView=findViewById(R.id.recycler_view)
         mRecyclerView.apply {
-            layoutManager=LinearLayoutManager(this@RecyclerViewMain,RecyclerView.VERTICAL,false)
+            layoutManager=LinearLayoutManager(this@Activity2ViewMain,RecyclerView.VERTICAL,false)
             adapter=mAdapter
         }
         val extra= intent.extras

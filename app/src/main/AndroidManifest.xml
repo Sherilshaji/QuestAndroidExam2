@@ -27,7 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RecyclerViewMain"
+        <activity android:name=".Activity2ViewMain"
             android:exported="true"
             android:theme="@style/Theme.Exam2">
         </activity>

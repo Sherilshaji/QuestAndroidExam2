@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerViewAdapter(mainActivity: RecyclerViewMain): RecyclerView.Adapter<RecyclerViewHolder>() {
+class RecyclerViewAdapter(mainActivity: Activity2ViewMain): RecyclerView.Adapter<RecyclerViewHolder>() {
     private var mClickListener: ItemClickListener = mainActivity
 
     private var newsModelList = listOf<NewsModel>()

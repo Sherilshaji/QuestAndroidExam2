@@ -10,7 +10,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class RecyclerActivityViewModel: ViewModel() {
+class Activity2ViewModel: ViewModel() {
     private val _newsDetails = MutableLiveData<List<NewsModel>>(emptyList())
     val newsDetails: LiveData<List<NewsModel>> = _newsDetails
     private var job: Job? = null
