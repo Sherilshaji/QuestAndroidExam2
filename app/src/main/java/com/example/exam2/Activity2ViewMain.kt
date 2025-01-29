@@ -13,8 +13,6 @@ class Activity2ViewMain:ComponentActivity(),RecyclerViewAdapter.ItemClickListene
     private val viewModel by viewModels<Activity2ViewModel>()
     private lateinit var mRecyclerView: RecyclerView
     private var mAdapter: RecyclerViewAdapter = RecyclerViewAdapter(this)
-    //private lateinit var newsDB:NewsDB
-    //private lateinit var dao: NewsDao
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -31,8 +29,6 @@ class Activity2ViewMain:ComponentActivity(),RecyclerViewAdapter.ItemClickListene
         viewModel.newsDetails.observe(this) {
             mAdapter.updateData(it)
         }
-        //newsDB=Room.databaseBuilder(this,NewsDB::class.java,"news-db").build()
-        //dao=newsDB.news()
     }
 
     fun fetchNewsDetails(){
